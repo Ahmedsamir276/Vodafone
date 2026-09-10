@@ -1,64 +1,88 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عروض شحن فودافون</title>
-    <style>
-        body { font-family: Arial; background: #f5f5f5; text-align: center; padding: 20px; }
-        h1 { color: #E60000; }
-        .card { background: white; border-radius: 10px; padding: 15px; margin: 10px auto; width: 90%; max-width: 400px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .price { color: #E60000; font-weight: bold; font-size: 20px; }
-        .info { background: #fff3cd; padding: 15px; border-radius: 10px; margin-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>طلب باقات فودافون</title>
+<style>
+    body{background:#0a0a0a;color:#fff;font-family:'Arial';margin:0;padding:20px;text-align:center}
+    h1{font-size:24px;margin-bottom:5px}
+    .subtitle{color:#aaa;margin-bottom:20px}
+    .section{margin:20px 0;text-align:right;max-width:500px;margin:auto}
+    .section-title{font-weight:bold;margin:15px 0}
+    .box{background:#1a1a1a;border:2px solid #2a2a2a;border-radius:12px;padding:15px;margin:10px 0;cursor:pointer;transition:0.3s}
+    .box:hover{border-color:#E60000}
+    .box-title{font-size:18px;font-weight:bold}
+    .price{color:#E60000;font-size:20px;font-weight:bold;margin-top:5px}
+    input,select{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #333;background:#1a1a1a;color:#fff;box-sizing:border-box;text-align:right}
+    .cash{background:#1a0000;border:2px dashed #E60000;padding:15px;border-radius:12px;margin-top:20px}
+    .cash-title{font-size:16px}
+    .cash-num{color:#E60000;font-size:22px;font-weight:bold;letter-spacing:2px}
+</style>
 </head>
 <body>
 
-    <h1>اختيار الباقة</h1>
+<h1>طلب باقات فودافون</h1>
+<p class="subtitle">اختار الباقة المطلوبة ثم املأ البيانات</p>
 
-    <h2>باقات الفليكس</h2>
-    <div class="card">
-        <p>5200 فليكس</p>
-        <p class="price">120 جنيه</p>
+<div class="section">
+    <div class="section-title">1. اختر الباقة</div>
+    
+    <div class="box">
+        <div class="box-title">5200 ميجا</div>
+        <div class="price">120 جنيه</div>
+    </div>
+    
+    <div class="box">
+        <div class="box-title">10400 ميجا</div>
+        <div class="price">220 جنيه</div>
     </div>
 
-    <div class="card">
-        <p>10400 فليكس</p>
-        <p class="price">220 جنيه</p>
+    <div class="box">
+        <div class="box-title">7500 ميجا</div>
+        <div class="price">120 جنيه</div>
     </div>
 
-    <h2>باقات النت</h2>
-    <div class="card">
-        <p>7500 ميجا</p>
-        <p class="price">120 جنيه</p>
+    <div class="box">
+        <div class="box-title">11500 ميجا</div>
+        <div class="price">180 جنيه</div>
     </div>
 
-    <div class="card">
-        <p>11500 ميجا</p>
-        <p class="price">180 جنيه</p>
+    <div class="box">
+        <div class="box-title">20 الف ميجا</div>
+        <div class="price">280 جنيه</div>
     </div>
 
-    <div class="card">
-        <p>20 الف ميجا</p>
-        <p class="price">280 جنيه</p>
+    <div class="box">
+        <div class="box-title">31500 ميجا</div>
+        <div class="price">440 جنيه</div>
     </div>
 
-    <div class="card">
-        <p>31500 ميجا</p>
-        <p class="price">440 جنيه</p>
+    <div class="box">
+        <div class="box-title">49 الف ميجا</div>
+        <div class="price">550 جنيه</div>
     </div>
+</div>
 
-    <div class="card">
-        <p>49 الف ميجا</p>
-        <p class="price">550 جنيه</p>
-    </div>
+<div class="section">
+    <div class="section-title">2. رقم فودافون</div>
+    <input type="tel" placeholder="01xxxxxxxxx">
+</div>
 
-    <div class="info">
-        <h3>للشحن تواصل معانا</h3>
-        <p><b>1.</b> رقم التلفون</p>
-        <p><b>2.</b> كلمه المرور انا فودافون</p>
-        <p><b>3.</b> رقم فودافون كاش للتحويل: <b>01035562989</b></p>
-    </div>
+<div class="section">
+    <div class="section-title">3. كلمة مرور أنا فودافون</div>
+    <input type="password" placeholder="اكتب الباسورد أو اتركها فارغة">
+    <p style="color:#aaa;font-size:14px">إذا كنت لا تعرف كلمة المرور</p>
+    <select>
+        <option>أول مرة بتعامل معاكم</option>
+        <option>نسيت كلمة المرور</option>
+    </select>
+</div>
+
+<div class="section cash">
+    <div class="cash-title">رقم فودافون كاش للتحويل 📲</div>
+    <div class="cash-num">01035562989</div>
+</div>
 
 </body>
 </html>
